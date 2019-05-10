@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  docker_jupytr_training:
+    build: .
+    container_name: docker_jupyter_training
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./workspace:/home/jovyan/work
