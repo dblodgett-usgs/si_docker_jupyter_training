@@ -20,3 +20,8 @@ RUN Rscript -e 'install.packages(c("dataRetrieval", "sf", "RNetCDF", "tidyverse"
 USER $NB_UID
 
 RUN Rscript -e 'IRkernel::installspec()'
+
+USER root
+
+RUN Rscript -e 'devtools::install_github("usgs-r/nhdplusTools")'
+
