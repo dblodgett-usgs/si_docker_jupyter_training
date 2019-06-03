@@ -6,13 +6,9 @@ Assuming you've installed [Docker Desktop](https://www.docker.com/products/docke
 
 To run the Docker image, from the root of this repository, do:
 
-`docker run -p 8888:8888 -v "${PWD}":/home/jovyan/work dblodgett/si_docker_jupyter_training:v0.2`
+docker-compose up
 
-Or to run without a security token do:
-
-`docker run -p 8888:8888 -v "${PWD}":/home/jovyan/work dblodgett/si_docker_jupyter_training:v0.2 start.sh jupyter lab --LabApp.token=''`
-
-Or to build the container from scratch, do:
+Or to build the container from scratch, modify docker-compose.yml to `build: .` rather than start from a declared image and do:
 
 `docker-compose up --build`
 

@@ -1,10 +1,11 @@
 version: '3'
 
 services:
-  docker_jupytr_training:
-    build: .
+  si:
+    image: dblodgett/si_docker_jupyter_training:v0.2
     container_name: docker_jupyter_training
     ports:
       - "8888:8888"
     volumes:
       - ./workspace:/home/jovyan/work
+    command: start.sh jupyter lab --LabApp.token=''
