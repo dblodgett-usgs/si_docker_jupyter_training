@@ -19,7 +19,10 @@ Or to build the container from scratch, modify docker-compose.yml to `build: .` 
 `docker-compose up --build`
 
 ## Activity
-**Task 0:** Chose teams of 2 and get jupyter working on both of your machines. http://127.0.0.1:8888/tree should show the "work" folder and you should see this repository's contents in "work".  
+**Task 0:** All take part (pair program as needed)  
+Summary: Chose teams of 2 and get jupyter working on both of your machines. http://127.0.0.1:8888/tree should show the "work" folder and you should see this repository's contents in "work".  
+Resource: Google and/or other people.  
+Outcome: Jupyter running on local machines ready for further tasks.  
 
 **Task 1:** Younger team member leads.  
 Summary: Use R to get some streamflow data, precipitation data, and some basic geospatial data for a small watershed. This demonstration will include some plotting to verify we got the data.  
