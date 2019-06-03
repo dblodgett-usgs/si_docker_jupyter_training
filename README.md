@@ -2,7 +2,13 @@
 
 This repository holds a Dockerfile for a Jupyter installation and dependencies for use in training at the 2019 National Water Center Summer Institute.
 
-Assuming you've installed [Docker Desktop](https://www.docker.com/products/docker-desktop)
+Assuming you've installed [Docker Desktop](https://www.docker.com/products/docker-desktop) and [git](https://git-scm.com/)/[gitbash (windows)](https://gitforwindows.org/), to get started, open a terminal or gitbash and do:
+
+```
+git clone https://github.com/dblodgett-usgs/si_docker_jupyter_training.git
+cd si_docker_jupyter_training
+docker-compose up
+```
 
 To run the Docker image, from the root of this repository, do:
 
