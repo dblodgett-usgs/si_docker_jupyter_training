@@ -6,7 +6,7 @@ Assuming you've installed [Docker Desktop](https://www.docker.com/products/docke
 
 To run the Docker image, from the root of this repository, do:
 
-docker-compose up
+`docker-compose up`
 
 Or to build the container from scratch, modify docker-compose.yml to `build: .` rather than start from a declared image and do:
 

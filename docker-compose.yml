@@ -2,7 +2,7 @@ version: '3'
 
 services:
   si:
-    image: dblodgett/si_docker_jupyter_training:v0.2
+    image: dblodgett/si_docker_jupyter_training:v0.3
     container_name: docker_jupyter_training
     ports:
       - "8888:8888"
