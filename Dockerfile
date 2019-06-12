@@ -5,11 +5,6 @@ LABEL maintainer="David Blodgett <dblodgett@usgs.gov>"
 
 USER root
 
-# Install numpy, scipy and matplotlib
-RUN pip install scipy matplotlib pandas sympy
-
-USER root
-
 # Stole this from R travis
 RUN apt-get update && \
 	apt-get -y install software-properties-common && \
@@ -32,4 +27,5 @@ RUN Rscript -e 'devtools::install_github("usgs-r/nhdplusTools")'
 
 RUN Rscript -e 'devtools::install_github("usgs-r/intersectr")'
 
-# Get additional repositories
+# Install numpy, scipy and matplotlib
+RUN pip install scipy matplotlib pandas sympy
