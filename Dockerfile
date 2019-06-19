@@ -29,3 +29,24 @@ RUN Rscript -e 'devtools::install_github("usgs-r/intersectr")'
 
 # Install numpy, scipy and matplotlib
 RUN pip install scipy matplotlib pandas sympy
+
+# Install ncl
+RUN apt-get -y install ncl-ncarg && \
+	ln -s /usr/share/ncarg /usr/lib/ncarg
+	
+# install netcdf command line
+RUN apt-get -y install libnetcdf-dev libnetcdff-dev netcdf-bin
+
+# Install docker
+# RUN apt-get -y install \
+#     apt-transport-https \
+#     ca-certificates \
+#     curl \
+#     gnupg-agent \
+#     software-properties-common && \
+# 		curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add - && \
+# 		sudo add-apt-repository \
+# 		   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+# 		   $(lsb_release -cs) \
+# 		   stable" && \
+# 		apt-get -y install docker-ce docker-ce-cli containerd.io
