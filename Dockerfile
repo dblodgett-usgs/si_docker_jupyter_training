@@ -38,15 +38,16 @@ RUN apt-get -y install ncl-ncarg && \
 RUN apt-get -y install libnetcdf-dev libnetcdff-dev netcdf-bin
 
 # Install docker
-# RUN apt-get -y install \
-#     apt-transport-https \
-#     ca-certificates \
-#     curl \
-#     gnupg-agent \
-#     software-properties-common && \
-# 		curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add - && \
-# 		sudo add-apt-repository \
-# 		   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
-# 		   $(lsb_release -cs) \
-# 		   stable" && \
-# 		apt-get -y install docker-ce docker-ce-cli containerd.io
+RUN apt-get -y install \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    gnupg-agent \
+    software-properties-common && \
+		curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add - && \
+		sudo add-apt-repository \
+		   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+		   $(lsb_release -cs) \
+		   stable" && \
+		apt-get -y install docker-ce docker-ce-cli containerd.io
+		

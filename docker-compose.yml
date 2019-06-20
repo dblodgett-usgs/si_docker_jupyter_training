@@ -2,10 +2,18 @@ version: '3'
 
 services:
   si:
-    image: dblodgett/si_docker_jupyter_training:v0.5
+    # image: dblodgett/si_docker_jupyter_training:v0.5
+    build: .
     container_name: docker_jupyter_training
+    user: root
     ports:
       - "8888:8888"
     volumes:
-      - ./workspace:/home/jovyan/work
-    command: start.sh jupyter lab --LabApp.token=''
+      - /jupyter:/jupyter
+      - /var/run/docker.sock:/var/run/docker.sock
+    command: >
+      sh -c "chgrp docker /var/run/docker.sock && 
+             chmod g+rwx  /var/run/docker.sock && 
+             usermod -a -G docker jovyan &&
+             start.sh jupyter lab --LabApp.token='' --ContentsManager.root_dir='/jupyter'"
+             
